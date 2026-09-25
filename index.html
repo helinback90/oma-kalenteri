@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CampusConnect auttaa opiskelupäivän, kurssien ja tapahtumien hallinnassa." />
+    <title>CampusConnect | Opiskelijan työpöytä</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Siirry pääsisältöön</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Päänavigaatio">
+        <a class="brand" href="#home" data-view-link="home" aria-label="CampusConnect etusivu">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Campus<span>Connect</span></span>
+        </a>
+        <p class="eyebrow sidebar-label">TYÖPÖYTÄ</p>
+        <nav class="nav-list">
+          <a href="#home" class="nav-link active" data-view-link="home"><span class="nav-icon" aria-hidden="true">⌂</span> Etusivu</a>
+          <a href="#calendar" class="nav-link" data-view-link="calendar"><span class="nav-icon" aria-hidden="true">□</span> Kalenteri</a>
+          <a href="#courses" class="nav-link" data-view-link="courses"><span class="nav-icon" aria-hidden="true">▤</span> Kurssit</a>
+          <a href="#events" class="nav-link" data-view-link="events"><span class="nav-icon" aria-hidden="true">♢</span> Tapahtumat</a>
+        </nav>
+        <p class="eyebrow sidebar-label second-label">OMA CAMPUS</p>
+        <nav class="nav-list">
+          <a href="#messages" class="nav-link" data-view-link="messages"><span class="nav-icon" aria-hidden="true">◌</span> Viestit <span class="notification-dot">3</span></a>
+          <a href="#materials" class="nav-link" data-view-link="materials"><span class="nav-icon" aria-hidden="true">▱</span> Materiaalit</a>
+          <a href="#profile" class="nav-link" data-view-link="profile"><span class="nav-icon" aria-hidden="true">◎</span> Profiili</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-card">
+            <span class="help-icon" aria-hidden="true">?</span>
+            <div><strong>Tarvitsetko apua?</strong><a href="#messages" data-view-link="messages">Ota yhteyttä tukeen</a></div>
+          </div>
+          <p class="version">CampusConnect v1.0</p>
+        </div>
+      </aside>
+
+      <main id="main-content" class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" type="button" aria-label="Avaa navigaatio" aria-expanded="false">☰</button>
+          <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="Hae kursseja, tapahtumia..." aria-label="Hae CampusConnectista" /></div>
+          <div class="topbar-actions">
+            <button class="icon-button" type="button" aria-label="Ilmoitukset"><span aria-hidden="true">♧</span><i></i></button>
+            <button class="avatar-button" type="button" data-view-link="profile" aria-label="Avaa oma profiili"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=96&q=80" alt="Aino Virtanen" /></button>
+          </div>
+        </header>
+
+        <div class="view-container">
+          <section class="view active-view" data-view="home" aria-labelledby="home-title">
+            <div class="welcome-row"><div><p class="eyebrow">TORSTAI 24. LOKAKUUTA 2024</p><h1 id="home-title">Hyvää huomenta, Aino <span aria-hidden="true">✦</span></h1><p class="muted intro">Tässä on päivän tärkeimmät asiat koottuna yhteen.</p></div><button class="primary-button" data-action="add-event"><span aria-hidden="true">+</span> Lisää kalenteriin</button></div>
+            <div class="hero-banner"><div class="hero-copy"><span class="pill light-pill">TÄMÄN VIIKON NOSTO</span><h2>Opiskelijaelämä<br /><em>on muutakin</em> kuin luentoja.</h2><p>Löydä oma tapasi oppia, osallistua ja kuulua yhteisöön.</p><a class="text-link light-link" href="#events" data-view-link="events">Tutustu tapahtumiin <span aria-hidden="true">↗</span></a></div><div class="hero-shape" aria-hidden="true"><span>✦</span><b>CC</b></div></div>
+            <div class="section-heading"><div><p class="eyebrow">TÄNÄÄN</p><h2>Päivän ohjelma</h2></div><a class="text-link" href="#calendar" data-view-link="calendar">Näytä kalenteri <span aria-hidden="true">→</span></a></div>
+            <div class="schedule-grid"><article class="schedule-card featured"><div class="time">09:00 <span>— 10:30</span></div><div class="class-dot coral"></div><div class="schedule-body"><p class="course-code">CS101 · LUENTO</p><h3>Johdatus ohjelmointiin</h3><p class="muted">Auditorio A · Rakennus 2</p></div><span class="status-badge live">Nyt alkaa</span></article><article class="schedule-card"><div class="time">12:15 <span>— 14:00</span></div><div class="class-dot teal"></div><div class="schedule-body"><p class="course-code">DES204 · TYÖPAJA</p><h3>Palvelumuotoilun perusteet</h3><p class="muted">Studio 4 · Rakennus 5</p></div><span class="status-badge">Tänään</span></article></div>
+            <div class="section-heading upcoming-heading"><div><p class="eyebrow">PIKAKATSAUS</p><h2>Sinulle suunniteltu</h2></div></div><div class="mini-grid"><a class="mini-card" href="#events" data-view-link="events"><span class="mini-icon orange">✦</span><span><strong>4 uutta tapahtumaa</strong><small>Katso mitä kampuksella tapahtuu</small></span><span aria-hidden="true">→</span></a><a class="mini-card" href="#messages" data-view-link="messages"><span class="mini-icon blue">◌</span><span><strong>3 lukematonta viestiä</strong><small>Opettajat ja opiskelukaverit</small></span><span aria-hidden="true">→</span></a><a class="mini-card" href="#courses" data-view-link="courses"><span class="mini-icon green">▤</span><span><strong>Kurssisi ovat ajan tasalla</strong><small>Ei palautuksia tällä viikolla</small></span><span aria-hidden="true">→</span></a></div>
+          </section>
+
+          <section class="view" data-view="calendar" aria-labelledby="calendar-title"><div class="page-heading"><div><p class="eyebrow">VIIKKO 43</p><h1 id="calendar-title">Kalenteri</h1><p class="muted intro">Kaikki menot yhdessä näkymässä.</p></div><button class="primary-button" data-action="add-event"><span aria-hidden="true">+</span> Uusi tapahtuma</button></div><div class="calendar-toolbar"><button class="icon-button" aria-label="Edellinen viikko">←</button><strong>21. — 27. lokakuuta 2024</strong><button class="icon-button" aria-label="Seuraava viikko">→</button><button class="secondary-button">Tänään</button></div><div class="calendar-grid"><div class="calendar-head"><span></span><span>MA 21</span><span>TI 22</span><span class="today">KE 23</span><span>TO 24</span><span>PE 25</span></div><div class="calendar-body"><span class="calendar-time">08:00</span><span></span><span></span><span></span><span></span><span></span><span class="calendar-time">10:00</span><span></span><div class="calendar-event event-coral"><b>Johdatus ohjelmointiin</b><small>Auditorio A · 09:00</small></div><span></span><span></span><span></span><span></span><span class="calendar-time">12:00</span><span></span><div class="calendar-event event-teal"><b>Palvelumuotoilu</b><small>Studio 4 · 12:15</small></div><span></span><span></span><span></span><span></span><span class="calendar-time">14:00</span><span></span><span></span><span></span><div class="calendar-event event-yellow"><b>Opintopiiri</b><small>Kirjasto · 15:00</small></div><span></span><span></span></div></div></section>
+
+          <section class="view" data-view="courses" aria-labelledby="courses-title"><div class="page-heading"><div><p class="eyebrow">LUKUVUOSI 2024–2025</p><h1 id="courses-title">Kurssini</h1><p class="muted intro">Seuraa opintojesi etenemistä helposti.</p></div><button class="secondary-button">+ Ilmoittaudu kurssille</button></div><div class="course-list"><article class="course-card"><div class="course-color coral-bg">CS</div><div class="course-info"><span class="course-code">CS101 · 5 OP</span><h2>Johdatus ohjelmointiin</h2><p class="muted">Prof. Mikko Laine · Periodi 1</p><div class="progress-label"><span>Kurssin eteneminen</span><strong>68 %</strong></div><div class="progress"><span style="width:68%"></span></div></div><span class="course-arrow">→</span></article><article class="course-card"><div class="course-color teal-bg">DM</div><div class="course-info"><span class="course-code">DES204 · 5 OP</span><h2>Palvelumuotoilun perusteet</h2><p class="muted">Leena Salmi · Periodi 1</p><div class="progress-label"><span>Kurssin eteneminen</span><strong>42 %</strong></div><div class="progress teal-progress"><span style="width:42%"></span></div></div><span class="course-arrow">→</span></article><article class="course-card"><div class="course-color yellow-bg">MC</div><div class="course-info"><span class="course-code">COM110 · 3 OP</span><h2>Viestintä ja vuorovaikutus</h2><p class="muted">Janne Koski · Periodi 1</p><div class="progress-label"><span>Kurssin eteneminen</span><strong>85 %</strong></div><div class="progress yellow-progress"><span style="width:85%"></span></div></div><span class="course-arrow">→</span></article></div></section>
+
+          <section class="view" data-view="events" aria-labelledby="events-title"><div class="page-heading"><div><p class="eyebrow">CAMPUS LIFE</p><h1 id="events-title">Tapahtumat</h1><p class="muted intro">Löydä seuraava juttusi.</p></div><button class="filter-button">Kaikki tapahtumat ▾</button></div><div class="event-feature"><div class="event-image" role="img" aria-label="Opiskelijoita keskustelemassa kampuksella"></div><div class="event-feature-copy"><span class="pill coral-pill">SUOSITELTU SINULLE</span><h2>Creative Coding<br />& Coffee</h2><p>Rentoa koodausta, uusia tuttavuuksia ja hyvää kahvia. Kaikentasoiset ovat tervetulleita.</p><div class="event-meta"><span>◷ Ke 30.10. · 16:00</span><span>⌖ Makerspace</span></div><button class="primary-button" data-action="join-event">Ilmoittaudu mukaan</button></div></div><div class="section-heading"><div><p class="eyebrow">TULOSSA</p><h2>Muita tapahtumia</h2></div></div><div class="event-list"><article><div class="event-date"><b>02</b><small>MARRAS</small></div><div><span class="course-code">YHTEISÖ</span><h3>Syyskarnevaali</h3><p class="muted">Lauantai 2.11. · Kampuksen piha</p></div><button class="round-arrow" aria-label="Avaa syyskarnevaali">→</button></article><article><div class="event-date teal-date"><b>05</b><small>MARRAS</small></div><div><span class="course-code">HYVINVOINTI</span><h3>Jooga opiskelijoille</h3><p class="muted">Tiistai 5.11. · Liikuntasali</p></div><button class="round-arrow" aria-label="Avaa jooga opiskelijoille">→</button></article></div></section>
+
+          <section class="view" data-view="messages" aria-labelledby="messages-title"><div class="page-heading"><div><p class="eyebrow">YHTEYS</p><h1 id="messages-title">Viestit</h1><p class="muted intro">Pidä yhteyttä opintopiiriisi.</p></div><button class="primary-button" data-action="new-message">+ Uusi viesti</button></div><div class="message-layout"><div class="message-list"><button class="message-item active"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80" alt="" /><span><b>Leena Salmi</b><small>Hei Aino! Muistathan huomis...</small></span><time>09:42</time></button><button class="message-item"><span class="message-avatar violet">ML</span><span><b>Mikko Laine</b><small>Kurssin uusi tehtävä on nyt...</small></span><time>Eilen</time></button><button class="message-item"><span class="message-avatar yellow">OP</span><span><b>Opiskelijapalvelut</b><small>Vastauksesi on käsitelty</small></span><time>22.10.</time></button></div><div class="message-empty"><span class="empty-icon">◌</span><h2>Valitse viesti</h2><p class="muted">Valitse keskustelu nähdäksesi viestit täällä.</p></div></div></section>
+
+          <section class="view" data-view="materials" aria-labelledby="materials-title"><div class="page-heading"><div><p class="eyebrow">OPPIMINEN</p><h1 id="materials-title">Materiaalit</h1><p class="muted intro">Kaikki oppimiseen tarvittava yhdessä paikassa.</p></div><button class="secondary-button">+ Lataa tiedosto</button></div><div class="material-folders"><article><span class="folder-icon coral">▰</span><h2>Johdatus ohjelmointiin</h2><p>12 tiedostoa · Päivitetty tänään</p></article><article><span class="folder-icon teal">▰</span><h2>Palvelumuotoilu</h2><p>8 tiedostoa · Päivitetty 2 päivää sitten</p></article><article><span class="folder-icon yellow">▰</span><h2>Viestintä</h2><p>6 tiedostoa · Päivitetty viime viikolla</p></article></div></section>
+
+          <section class="view" data-view="profile" aria-labelledby="profile-title"><div class="page-heading"><div><p class="eyebrow">OMA TILI</p><h1 id="profile-title">Profiili</h1><p class="muted intro">Hallitse tietojasi ja asetuksiasi.</p></div><button class="secondary-button">Muokkaa tietoja</button></div><div class="profile-panel"><div class="profile-header"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=240&q=80" alt="Aino Virtanen" /><div><h2>Aino Virtanen</h2><p class="muted">Tietojenkäsittelytiede · 2. vuosi</p><span class="pill teal-pill">AKTIIVINEN OPISKELIJA</span></div></div><div class="profile-details"><div><span class="eyebrow">OPISKELIJA-ID</span><strong>CV-2024-0842</strong></div><div><span class="eyebrow">SÄHKÖPOSTI</span><strong>aino.virtanen@campus.fi</strong></div><div><span class="eyebrow">KAMPUS</span><strong>Otaniemi</strong></div></div></div></section>
+        </div>
+      </main>
+    </div>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
